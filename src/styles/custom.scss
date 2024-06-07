@@ -1,0 +1,84 @@
+// _custom.scss
+
+// Import Bootstrap source files
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Define your custom variables
+$primary: #fd7e14;
+
+$theme-colors: (
+    "primary": $primary
+);
+
+.summary-cards {
+    p.card-text {
+        font-size: .8rem;
+        color: $primary;
+    }
+}
+
+.inventory-tabs {
+    h4 {
+        float: left;
+        margin: 5px 10px 0 0;
+    }
+
+    .nav-tabs,
+    .nav-item,
+    .nav-link {
+        border: none !important;
+    }
+
+    .nav-link {
+        padding: 5px;
+    }
+
+    .nav-link button {
+        background-color: #fff;
+    }
+
+    .nav-link.active {
+        background-color: transparent !important;
+    }
+
+    .nav-link button:hover,
+    .nav-link.active button {
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+.btn-primary,
+.btn-primary:hover {
+    color: #fff !important;
+}
+
+.tab-content {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.table-container {
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.pagination {
+
+    .page-item span,
+    .page-item a {
+        color: $primary;
+    }
+
+    .page-item.active span {
+        border-color: $primary;
+        background-color: $primary;
+        color: #fff;
+    }
+}
+
+// Re-compile Bootstrap with your customizations
+@import '~bootstrap/scss/bootstrap';
